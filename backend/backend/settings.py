@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'djoser',
     'corsheaders',
     'django_filters',
+    "colorfield",
 ]
 
 MIDDLEWARE = [

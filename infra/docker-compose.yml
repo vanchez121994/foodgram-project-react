@@ -24,10 +24,6 @@ services:
     env_file:
       - ./.env
     restart: always
-    command: >
-      bash -c "python manage.py migrate &&
-      python manage.py collectstatic --noinput &&
-      gunicorn --bind 0:8000 backend.wsgi"
 
   nginx:
     image: nginx:1.21.3-alpine

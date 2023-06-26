@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user_model
+from django.db import transaction
 from djoser.serializers import UserSerializer, UserCreateSerializer
 from rest_framework.exceptions import ValidationError
 from rest_framework.fields import (
@@ -305,6 +306,7 @@ class RecipeCreateSerializer(ModelSerializer):
 
         return value
 
+    @transaction.atomic
     def create_ingredients(self, recipe, ingredients):
         RecipeIngredients.objects.bulk_create([
             RecipeIngredients(
@@ -314,6 +316,7 @@ class RecipeCreateSerializer(ModelSerializer):
             ) for ingredient in ingredients
         ])
 
+    @transaction.atomic
     def create(self, validated_data):
         tags = validated_data.pop('tags')
         ingredients = validated_data.pop('ingredients')
@@ -324,6 +327,7 @@ class RecipeCreateSerializer(ModelSerializer):
 
         return recipe
 
+    @transaction.atomic
     def update(self, instance, validated_data):
         tags = validated_data.pop('tags')
         ingredients = validated_data.pop('ingredients')
