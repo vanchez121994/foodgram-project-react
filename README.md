@@ -11,6 +11,15 @@
 [![GitHub%20Actions](https://img.shields.io/badge/-GitHub%20Actions-464646?style=flat-square&logo=GitHub%20actions)](https://github.com/features/actions)
 [![Yandex.Cloud](https://img.shields.io/badge/-Yandex.Cloud-464646?style=flat-square&logo=Yandex.Cloud)](https://cloud.yandex.ru/)
 
+проект находиться по адресу http://51.250.104.232/
+
+админка:
+vanchez@mail.ru
+пароль:
+12uZUMYMw94
+
+
+
 ## Для работы с удаленным сервером (на ubuntu):
 * Выполните вход на свой удаленный сервер
 
